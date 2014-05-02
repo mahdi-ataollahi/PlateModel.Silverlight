@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C19630D9-EDEA-4B81-A39D-A0DAB3818A3D}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlateModel.Silverlight</RootNamespace>
+    <AssemblyName>PlateModel.Silverlight</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <Utf8Output>true</Utf8Output>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Interactivity, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plates\Iran\Input\IRProtocolPlateInput.xaml.cs">
+      <DependentUpon>IRProtocolPlateInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plates\Iran\Input\PlateLetterConverter.cs" />
+    <Compile Include="Plates\Iran\Input\SepahPlateInput.xaml.cs">
+      <DependentUpon>SepahPlateInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vectors\Flags\IranFlag.xaml.cs">
+      <DependentUpon>IranFlag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plates\Iran\Input\IRNationalPlateInput.xaml.cs">
+      <DependentUpon>IRNationalPlateInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plates\Iran\Input\PlateLetterList.cs" />
+    <Compile Include="Plates\Iran\IRFreeTradeZonePlate.xaml.cs">
+      <DependentUpon>IRFreeTradeZonePlate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plates\Iran\IRHistoricalPlate.xaml.cs">
+      <DependentUpon>IRHistoricalPlate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plates\Iran\IRMotorcyclePlate.xaml.cs">
+      <DependentUpon>IRMotorcyclePlate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plates\Iran\IRNationalPlate.xaml.cs">
+      <DependentUpon>IRNationalPlate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plates\Iran\IRProtocolPlate.xaml.cs">
+      <DependentUpon>IRProtocolPlate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plates\Iran\SepahPlate.xaml.cs">
+      <DependentUpon>SepahPlate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vectors\Iran\DisabledPerson.xaml.cs">
+      <DependentUpon>DisabledPerson.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vectors\Iran\NationalPlateIranSymbol.xaml.cs">
+      <DependentUpon>NationalPlateIranSymbol.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Plates\Iran\Input\IRProtocolPlateInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Plates\Iran\Input\SepahPlateInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vectors\Flags\IranFlag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Plates\Iran\Input\IRNationalPlateInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Plates\Iran\IRFreeTradeZonePlate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Plates\Iran\IRHistoricalPlate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Plates\Iran\IRMotorcyclePlate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Plates\Iran\IRNationalPlate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Plates\Iran\IRProtocolPlate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Plates\Iran\SepahPlate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vectors\Iran\DisabledPerson.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vectors\Iran\NationalPlateIranSymbol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fonts\BYas.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </Resource>
+    <Resource Include="Fonts\BYasBd.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </Resource>
+    <Resource Include="Fonts\BYasBd_0.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </Resource>
+    <Resource Include="Fonts\BYasBd_1.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </Resource>
+    <Resource Include="Fonts\BYas_0.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </Resource>
+    <Resource Include="Fonts\BYas_1.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </Resource>
+    <Resource Include="Fonts\BRoya.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </Resource>
+    <Resource Include="Fonts\BRoyaBd.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pic\Iran\sardarebaghemelli.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pic\Iran\Anzali.PNG" />
+    <Resource Include="Pic\Iran\Aras.PNG" />
+    <Resource Include="Pic\Iran\Arvand.PNG" />
+    <Resource Include="Pic\Iran\Kish.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\SharedProjects\SilverlightSharedClasses\SilverlightSharedClasses\SilverlightSharedClasses.csproj">
+      <Project>{c9756c16-35a4-4217-9ff9-2b611ee433cc}</Project>
+      <Name>SilverlightSharedClasses</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
