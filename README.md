@@ -31,23 +31,33 @@ The project is not limited to a specific country, and there are country categori
 
 <h3>How to use plates</h3>
 It's very easy to use plates in your Silverlight project. Just add the corresponding plate to your XAML file:
-> &lt;Viewbox Width="240" xmlns:irplate="clr-namespace:PlateModel.Silverlight.Plates.Iran;assembly=PlateModel.Silverlight"&gt;<br/>
-> &nbsp;&nbsp;&lt;irplate:IRNationalPlate Plate="{Binding MyPlate, Mode=OneWay}" /&gt;<br/>
-> &lt;/Viewbox&gt;
+
+```xml
+<Viewbox Width="240" 
+         xmlns:irplate="clr-namespace:PlateModel.Silverlight.Plates.Iran;assembly=PlateModel.Silverlight">
+    <irplate:IRNationalPlate Plate="{Binding MyPlate, Mode=OneWay}" />
+</Viewbox>
+```
 
 <b>Note:</b> The only way to change the size of the plate is to use a _Viewbox_.<br/>
 The most important property of each plate control is the _Plate_ property. In the last example I bound it to _MyPlate_ property.
 If you want to set it manually you should write plate's characters respectively and without any spaces, commas, etc.
 For example:
-> &lt;irplate:IRNationalPlate Plate="12X34567" /&gt;
+
+```xml
+<irplate:IRNationalPlate Plate="12X34567" />
+```
 
 <h3>Plate Inputs</h3>
 Plate inputs are simple textboxes decorated with some features of the corresponding plate. See this example:
-> &lt;StackPanel xmlns:irplate="clr-namespace:PlateModel.Silverlight.Plates.Iran;assembly=PlateModel.Silverlight"<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmlns:irplateInput="clr-namespace:PlateModel.Silverlight.Plates.Iran.Input;assembly=PlateModel.Silverlight"&gt;<br/>
-> &nbsp;&nbsp;&lt;irplate:IRNationalPlate Plate="{Binding Plate, ElementName=myPlateInput, Mode=OneWay}" /&gt;<br/>
-> &nbsp;&nbsp;&lt;irplateInput:IRNationalPlateInput x:Name="myPlateInput" /&gt;<br/>
-> &lt;/StackPanel&gt;
+
+```xml
+<StackPanel xmlns:irplate="clr-namespace:PlateModel.Silverlight.Plates.Iran;assembly=PlateModel.Silverlight"
+            xmlns:irplateInput="clr-namespace:PlateModel.Silverlight.Plates.Iran.Input;assembly=PlateModel.Silverlight">
+    <irplate:IRNationalPlate Plate="{Binding Plate, ElementName=myPlateInput, Mode=OneWay}" />
+    <irplateInput:IRNationalPlateInput x:Name="myPlateInput" />
+</StackPanel>
+```
 
 What you type in the input control is shown in the plate control immediately.
 
