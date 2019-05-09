@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -60,6 +60,11 @@
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Behaviors\MaskedTextboxBehavior.cs" />
+    <Compile Include="Assets\Behaviors\SelectAllBehavior.cs" />
+    <Compile Include="Converters\ValueEqualityConverter.cs" />
+    <Compile Include="Converters\ValueInvisibilityConverter.cs" />
+    <Compile Include="Converters\ValueVisibilityConverter.cs" />
     <Compile Include="Plates\Iran\Input\IRProtocolPlateInput.xaml.cs">
       <DependentUpon>IRProtocolPlateInput.xaml</DependentUpon>
     </Compile>
@@ -200,12 +205,6 @@
     <Resource Include="Pic\Iran\Aras.PNG" />
     <Resource Include="Pic\Iran\Arvand.PNG" />
     <Resource Include="Pic\Iran\Kish.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="E:\SharedProjects\SilverlightSharedClasses\SilverlightSharedClasses\SilverlightSharedClasses.csproj">
-      <Project>{c9756c16-35a4-4217-9ff9-2b611ee433cc}</Project>
-      <Name>SilverlightSharedClasses</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>
